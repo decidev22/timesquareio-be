@@ -1,8 +1,10 @@
 import express from "express";
 import axios from "axios";
 require("dotenv").config();
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const PORT = 3003;
 
 const NEWSAPI_ENDPOINT = "https://newsapi.org/v2/top-headlines";
